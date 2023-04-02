@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class Assignment3Component {
 
+  no_of_clicks=[]
+  
+  DisplayPara(){
+
+  }
 }
