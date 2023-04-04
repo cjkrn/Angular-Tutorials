@@ -7,9 +7,21 @@ import { Component } from '@angular/core';
 })
 export class Assignment3Component {
 
-  no_of_clicks=[]
-  
-  DisplayPara(){
+  no_of_clicks:number[] =[]
+  count = 0;
+  flag: boolean = true
+
+  constructor(){
 
   }
+  ngOnInit(){}
+
+  toggleDisplayPara(){
+    this.count ++;
+    this.no_of_clicks.push(this.count)
+    this.flag = !this.flag
+    console.log(this.count)
+  }
+  // console.log(this.count)
+
 }

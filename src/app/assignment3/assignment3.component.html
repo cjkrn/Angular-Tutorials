@@ -11,15 +11,15 @@
                         
             <hr>
             <button class="btn btn-danger" 
-            (click)="DisplayPara()">Display Details User</button>
+            (click)="toggleDisplayPara()">Display Details User</button>
             <!-- <input type="text" class="form-control" [(ngModel)]="username"> -->
             <hr>
-            <p [hidden]="DisplayPara()">
+            <p [hidden]="flag">
                 Secret Password = tune
             </p>
+            <p *ngFor="let no of no_of_clicks">{{no_of_clicks}}
+            </p>
             <ng-template >
-                <p class="fifth" *ngFor="let click of no_of_clicks" >
-                </p>
             </ng-template>
             
             
