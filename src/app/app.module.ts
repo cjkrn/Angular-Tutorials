@@ -7,8 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModel } from '@angular/forms';
 import { Assignment2Component } from './assignment2/assignment2.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
-import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
+
 import { CourseMainComponent } from './course-main/course-main.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
@@ -18,7 +17,7 @@ import { CockpitComponent } from './cockpit/cockpit.component';
 @NgModule({
   declarations: [
     AppComponent, 
-   Assignment2Component, Assignment3Component, ServerComponent, ServersComponent, CourseMainComponent, ServerElementComponent, CockpitComponent, 
+   Assignment2Component, Assignment3Component, CourseMainComponent, ServerElementComponent, CockpitComponent, 
   ],
   imports: [
     BrowserModule,
