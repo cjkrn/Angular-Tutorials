@@ -1,10 +1,30 @@
 <div class="container">
-    <div class="section">
-        <app-course-main></app-course-main>
+    <!-- Course Main Section  -->
+    <h3 (click)="toggleSection('section1')" style=" text-align:center" >Course Main Section</h3>
+    <div class="section"  *ngIf="selectedSection === 'section1'" >
+        <div class="row">
+            <div class="col-sm-12" >
+                <app-course-main></app-course-main>
+            </div>
+        </div>
     </div>
-    <div class="section">
-        <app-assignment2></app-assignment2>
-        <h2>Assignment 3</h2>
-        <app-assignment3></app-assignment3>
+
+    <!-- Assignments Section -->
+    <h3 (click)="toggleSection('section2')" style=" text-align:center" >Assignment Section</h3>
+    <div class="section"  *ngIf="selectedSection === 'section2'"  >
+        <div class="row">
+            <div class="col-sm-12" >
+                <h3 (click)="toggleAssignment('assignment2')" style=" text-align:center" >Assignment 2</h3>
+                <div *ngIf="selectedAssignment === 'assignment2'" style="justify-content: left">
+                <app-assignment2></app-assignment2>
+                </div>
+                
+                <h3 (click)="toggleAssignment('assignment3')" style=" text-align:center" >Assignment 3</h3>
+                <div *ngIf="selectedAssignment === 'assignment3'">
+                <app-assignment3></app-assignment3>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>

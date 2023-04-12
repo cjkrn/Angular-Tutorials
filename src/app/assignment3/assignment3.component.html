@@ -1,15 +1,15 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
-            <ol>
+        <div class="col-xs-12" style="justify-content: center; display: flex">
+            <ol >
                 <li>Add A button which says 'Display Details'</li>
                 <li>Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')</li>
                 <li>Toggle the displaying of that paragraph with the button created in the first step</li>
                 <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
                 <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
             </ol>
-                        
-            <hr>
+        </div>
+        <div class="col-xs-12" style=" text-align:center" >
             <button class="btn btn-danger" 
             (click)="toggleDisplayPara()">Display Details User</button>
             <!-- <input type="text" class="form-control" [(ngModel)]="username"> -->
@@ -17,13 +17,14 @@
             <p [hidden]="flag">
                 Secret Password = tune
             </p>
-            <p *ngFor="let no of no_of_clicks">{{no_of_clicks}}
+            <p 
+            [ngStyle]="{ 'background-color': i>3 ? 'blue': 'transparent'}" 
+            [ngClass]="{fifth: i>3}"
+            *ngFor="let no of no_of_clicks; let i =index">{{i+1}}
             </p>
             <ng-template >
             </ng-template>
-            
-            
-            <hr>
+
         </div>
     </div>
 </div>

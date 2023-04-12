@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Assignment3Component {
 
-  no_of_clicks:number[] =[]
+  no_of_clicks:any[] =[]
   count = 0;
   flag: boolean = true
 
@@ -16,11 +16,15 @@ export class Assignment3Component {
   }
   ngOnInit(){}
 
+  getColor(){
+    return this.count>5 ? 'blue': 'white'
+
+  }
   toggleDisplayPara(){
-    this.count ++;
-    this.no_of_clicks.push(this.count)
+
+    this.no_of_clicks.push(new Date())
     this.flag = !this.flag
-    console.log(this.count)
+    // console.log(this.count)
   }
   // console.log(this.count)
 

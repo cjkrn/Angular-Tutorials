@@ -9,7 +9,7 @@ export class CourseMainComponent {
 
   serverElements = [{type: 'server', name: 'Testserver', content: 'Its a test!'}]
 
-
+  
   onServerAdded ( serverData:{serverName: string, serverContent: string} ){
     this.serverElements.push({
       type: 'server',
