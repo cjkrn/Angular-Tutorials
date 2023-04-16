@@ -24,4 +24,11 @@ export class CourseMainComponent {
       content: blueprintData.serverContent
     })
   }
+  onChangesFirst(){
+    this.serverElements[0].name= 'Changed';
+  }
+  onDestroyFirst(){
+    console.log("Destroy called")
+    this.serverElements.splice(0,1);
+  }
 }

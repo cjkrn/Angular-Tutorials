@@ -12,7 +12,7 @@ export class CockpitComponent implements OnInit {
   @Output('bpCreated') blueprintCreated = new EventEmitter< {serverName: string, serverContent: string}>();  // () to call the constr of EventEmitter
 
   // newServerName = ''
-  // newServerContent =''
+  newServerContent =''
   
   constructor(){}
   ngOnInit(){}
@@ -32,10 +32,10 @@ export class CockpitComponent implements OnInit {
         serverContent: this.newServerContent
       })
     }
-  onAddBlueprint(){
+  onAddBlueprint(LocalReferenceName: HTMLInputElement){
   // EventEmit :- https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656076#announcements
     this.blueprintCreated.emit({
-      serverName: this.newServerName,
+      serverName: LocalReferenceName.value,
       serverContent: this.newServerContent
     })
 

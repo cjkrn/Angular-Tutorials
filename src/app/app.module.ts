@@ -11,13 +11,14 @@ import { Assignment3Component } from './assignment3/assignment3.component';
 import { CourseMainComponent } from './course-main/course-main.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
+import { Assignment4Component } from './assignment4/assignment4.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent, 
-   Assignment2Component, Assignment3Component, CourseMainComponent, ServerElementComponent, CockpitComponent, 
+   Assignment2Component, Assignment3Component, CourseMainComponent, ServerElementComponent, CockpitComponent, Assignment4Component, 
   ],
   imports: [
     BrowserModule,
