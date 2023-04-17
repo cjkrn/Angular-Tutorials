@@ -11,7 +11,14 @@
         >
 
         <label>Server Content</label>
-        <input type="text" class="form-control" [(ngModel)]="newServerContent">
+
+        <input 
+        #serverContentInput
+        type="text" 
+        class="form-control" 
+        >
+        <!-- <p> Two Way Binding using Remote Reference</p> -->
+        <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent"> -->
         <br>
         <!-- USING ngModel  -->
         <!-- <button class="btn btn-primary" (click)="onAddServer()">Add Server</button> -->

@@ -17,13 +17,22 @@
             *ngFor="let serverElement of serverElements"    
             [srvElement]="serverElement"
             >
+<<<<<<< Updated upstream
             <!-- Using ng-content to render the server-element from within the parent course-main itself -->
 
             <p>
                 <strong *ngIf="serverElement.type  === 'server'" style="color: red">{{serverElement.content}}</strong>
                 <em *ngIf="serverElement.type === 'blueprint' ">{{serverElement.content}}</em>
+=======
+            <!-- If you want to Access the Server from this Parent component itself -->
+            
+            <p>
+                <strong *ngIf="serverElement.type  === 'server'" style="color: red">{{serverElement.content}}</strong>
+                <em *ngIf="serverElement.type === 'blueprint'">{{serverElement.content}}</em>
+>>>>>>> Stashed changes
             </p>
             </app-server-element>
+
         </div>
     </div>
 

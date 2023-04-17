@@ -26,9 +26,14 @@ export class ServerElementComponent implements OnInit
 {
   
   @Input('srvElement') element: {type:string, name: string, content: string } // https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656066#announcements
+<<<<<<< Updated upstream
 
   // ViewChild and ContentChild can be accessed only after their ng is called
   @ViewChild('heading', {static:true}) header:Element;
+=======
+  
+  AccessServerInParent: boolean = false;
+>>>>>>> Stashed changes
 
   constructor(){
     console.log("Server Element Component Constructor called");
