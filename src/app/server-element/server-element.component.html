@@ -1,13 +1,5 @@
 <div class="panel panel-default">
-<<<<<<< Updated upstream
     <div class="panel-heading" #heading>{{ element.name}}   </div>
-    <!-- Using ng-content -->
-    <ng-content>
-        <!-- https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656100#overview -->
-        <!-- This Directive used to show a complex template from the parent itself to the child here from course-main to server-element -->
-    </ng-content>
-=======
-    <div class="panel-heading">{{ element.name}}   </div>
     <p>
         <strong *ngIf="element.type  === 'server'" style="color: red">{{element.content}}</strong>
         <em *ngIf="element.type === 'blueprint'">{{element.content}}</em>
@@ -19,5 +11,4 @@
             <em *ngIf="element.type === 'blueprint'">{{element.content}}</em>
         </p>
     </div>
->>>>>>> Stashed changes
 </div>

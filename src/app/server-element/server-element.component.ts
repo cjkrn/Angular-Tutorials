@@ -8,7 +8,8 @@ import { Component, Input,
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  ViewChild
+  ViewChild,
+  ElementRef
 } from '@angular/core';
 
 @Component({
@@ -26,14 +27,8 @@ export class ServerElementComponent implements OnInit
 {
   
   @Input('srvElement') element: {type:string, name: string, content: string } // https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656066#announcements
-<<<<<<< Updated upstream
-
-  // ViewChild and ContentChild can be accessed only after their ng is called
-  @ViewChild('heading', {static:true}) header:Element;
-=======
-  
+  @ViewChild('heading') header: ElementRef;
   AccessServerInParent: boolean = false;
->>>>>>> Stashed changes
 
   constructor(){
     console.log("Server Element Component Constructor called");
@@ -44,7 +39,7 @@ export class ServerElementComponent implements OnInit
   }
   ngOnInit(){
     console.log("Server Element Component ngOnInit called");
-    console.log("Blank after ngOnit for ViewChild ", this.header.localName)
+    console.log("Blank after ngOnit for ViewChild ", this.header.nativeElement.value)
   }
 
   ngDoCheck(){
@@ -59,7 +54,7 @@ export class ServerElementComponent implements OnInit
   }
   ngAfterViewInit() {
       console.log("Server Element Component ngAfterViewInit called");
-      console.log("Not blank after ViewInit for ViewChild ", this.header.localName)
+      console.log("Not blank after ViewInit for ViewChild ", this.header.nativeElement.value)
 
     }
   ngAfterViewChecked(){

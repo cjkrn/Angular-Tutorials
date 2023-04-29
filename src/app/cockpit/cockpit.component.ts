@@ -11,16 +11,10 @@ export class CockpitComponent implements OnInit {
   @Output() serverCreated = new EventEmitter< {serverName: string, serverContent: string}>();  // () to call the constr of EventEmitter
   @Output('bpCreated') blueprintCreated = new EventEmitter< {serverName: string, serverContent: string}>();  // () to call the constr of EventEmitter
 
-<<<<<<< Updated upstream
-  // newServerName = ''
-  newServerContent =''
-  
-=======
   newServerName = ''
   // newServerContent =''
   // https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656094#notes
   @ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;
->>>>>>> Stashed changes
   constructor(){}
   ngOnInit(){}
 
@@ -40,25 +34,15 @@ export class CockpitComponent implements OnInit {
         serverContent: this.serverContentInput.nativeElement.value
       });
     }
-<<<<<<< Updated upstream
-  onAddBlueprint(LocalReferenceName: HTMLInputElement){
-=======
   onAddBlueprint(nameInput: HTMLInputElement){
 
->>>>>>> Stashed changes
   // EventEmit :- https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656076#announcements
   // Dont access DOM using ViewChild like this:- 
   // this.serverContentInput.nativeElement.value = 'Default'; 
     this.blueprintCreated.emit({
-<<<<<<< Updated upstream
-      serverName: LocalReferenceName.value,
-      serverContent: this.newServerContent
-    })
-=======
       serverName: nameInput.value,
       serverContent: this.serverContentInput.nativeElement.value // Getting the Local Refernce using ViewChild
     });
->>>>>>> Stashed changes
 
   }
 }
