@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class Assignment4Component implements OnInit{
 
-  @Output('') countEmit = new EventEmitter<any>();
+  @Output() countEmit = new EventEmitter<number>();
 
   constructor() { }
 
@@ -19,7 +19,7 @@ export class Assignment4Component implements OnInit{
   Event(event, status){
     if (status == 'start'){
        this.game = setInterval( () => {
-            this.countEmit.emit(this.count +=1)
+            this.countEmit.emit(this.count ++)
           }
           , 1000);
     }

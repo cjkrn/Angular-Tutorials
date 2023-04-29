@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OddComponent implements OnInit {
 
-  @Input('countEmit') countRecieved : number;
+  @Input() countRecieved : number;
   constructor() { }
   count : number[] = [];
 

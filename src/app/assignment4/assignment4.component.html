@@ -20,7 +20,7 @@
         <button class="btn btn-danger" (click)="Event($event, 'stop')" >End Game</button>
     </div>
     <div class="row">
-      <app-odd></app-odd>
+      <app-odd [countRecieved]="countEmit"></app-odd>
       <app-even></app-even>
     </div>
   </div>
