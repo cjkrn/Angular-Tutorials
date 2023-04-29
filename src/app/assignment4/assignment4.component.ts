@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-assignment4',
@@ -7,14 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Assignment4Component implements OnInit{
 
+  @Output('') countEmit = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit() {
       
   }
-
-  Event(event){
-    setInterval(event, 1000);
+  count = 0
+  game:any; 
+  Event(event, status){
+    if (status == 'start'){
+       this.game = setInterval( () => {
+            this.countEmit.emit(this.count +=1)
+          }
+          , 1000);
+    }
+    else{
+      this.count =0 
+      clearInterval(this.game);
+    }
   }
 
 }
