@@ -12,21 +12,27 @@ export class Assignment4Component implements OnInit{
   constructor() { }
 
   ngOnInit() {
-      
   }
   count = 0
   game:any; 
-  Event(event, status){
-    if (status == 'start'){
-       this.game = setInterval( () => {
-            this.countEmit.emit(this.count ++)
-          }
-          , 1000);
+  onStartGame(){
+    if (this.game) {
+      return // if game is running
     }
     else{
-      this.count =0 
-      clearInterval(this.game);
+      // console.log("Event", event, status);
+      this.game = setInterval( () => {
+          console.log("Count", this.count)
+          // this.countEmit.emit(this.count)
+          this.count ++ ;  
+        }
+        , 1000);
     }
-  }
+   } 
+  onPauseGame() {
+    // this.count =0 
+    clearInterval(this.game);
+    this.game = null; // To clear the game state
+  }   
 
 }

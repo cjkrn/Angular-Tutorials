@@ -29,6 +29,11 @@
                 <app-assignment4></app-assignment4>
                 </div>
 
+                <h3 (click)="toggleAssignment('assignment5')" style=" text-align:center" >Assignment 5</h3>
+                <div *ngIf="selectedAssignment === 'assignment5'">
+                <app-assignment5></app-assignment5>
+                </div>
+
             </div>
         </div>
     </div>

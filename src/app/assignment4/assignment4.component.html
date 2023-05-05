@@ -15,13 +15,13 @@
       </div>
     </div>
     <div class="row" style="text-align: center;">
-        <button class="btn btn-primary"  (click)="Event($event, 'start')"  >Start Game</button>
+        <button class="btn btn-primary"  (click)="onStartGame()"  >Start Game</button>
         <span style="margin:50px;"></span>
-        <button class="btn btn-danger" (click)="Event($event, 'stop')" >End Game</button>
+        <button class="btn btn-danger" (click)="onPauseGame()" >Pause Game</button>
     </div>
     <div class="row">
-      <app-odd [countRecieved]="countEmit"></app-odd>
-      <app-even></app-even>
+      <app-odd [countRecieved]="count" ></app-odd>
+      <app-even [countRecieved]="count"></app-even>
     </div>
   </div>
   

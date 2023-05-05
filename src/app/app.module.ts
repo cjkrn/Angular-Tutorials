@@ -14,13 +14,16 @@ import { CockpitComponent } from './cockpit/cockpit.component';
 import { Assignment4Component } from './assignment4/assignment4.component';
 import { OddComponent } from './assignment4/odd/odd.component';
 import { EvenComponent } from './assignment4/even/even.component';
+import { Assignment5Component } from './assignment5/assignment5.component';
+import { ActiveUsersComponent } from './assignment5/active-users/active-users.component';
+import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent, 
-   Assignment2Component, Assignment3Component, CourseMainComponent, ServerElementComponent, CockpitComponent, Assignment4Component, OddComponent, EvenComponent, 
+   Assignment2Component, Assignment3Component, CourseMainComponent, ServerElementComponent, CockpitComponent, Assignment4Component, OddComponent, EvenComponent, Assignment5Component, ActiveUsersComponent, InactiveUsersComponent, 
   ],
   imports: [
     BrowserModule,

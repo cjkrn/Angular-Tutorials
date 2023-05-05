@@ -1,22 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-odd',
   templateUrl: './odd.component.html',
   styleUrls: ['./odd.component.css']
 })
-export class OddComponent implements OnInit {
+export class OddComponent implements OnInit, OnChanges {
 
   @Input() countRecieved : number;
   constructor() { }
-  count : number[] = [];
+  oddCount : number[] = [];
 
   ngOnInit(): void {
-    console.log("Count recieved: " , this.countRecieved);
+  }
+  ngOnChanges(change: SimpleChanges){
     if ( this.countRecieved %2 != 0) {
-      this.count.push(this.countRecieved) 
+      console.log("Odd Count recieved:-" , this.countRecieved);
+      this.oddCount.push(this.countRecieved) 
     }
   }
-  
 
 }

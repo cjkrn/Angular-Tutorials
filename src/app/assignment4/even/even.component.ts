@@ -1,22 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-even',
   templateUrl: './even.component.html',
   styleUrls: ['./even.component.css']
 })
-export class EvenComponent implements OnInit {
+export class EvenComponent implements OnInit, OnChanges {
 
-  @Input('countEmit') countRecieved : number;
+  @Input() countRecieved : number;
   constructor() { }
-  count : number[] = [];
+  evenCount : number[] = [];
 
   ngOnInit(): void {
-    console.log("Count recieved: " , this.countRecieved);
-    if ( this.countRecieved %2 == 0) {
-      this.count.push(this.countRecieved) 
+  }
+  ngOnChanges(change: SimpleChanges){
+    if ( this.countRecieved %2 == 0 && this.countRecieved != 0) {
+      console.log("Even Count recieved:-" , this.countRecieved);
+      this.evenCount.push(this.countRecieved) 
     }
   }
-  
 
 }
